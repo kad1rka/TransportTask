@@ -1,0 +1,53 @@
+﻿<Window x:Class="TransportTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransportTask"
+        mc:Ignorable="d"
+        Title="Решение транспортной задачи" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="16" FontWeight="Bold" Text="Решение транспортной задачи" Grid.Row="0" Margin="0,0,0,10"/>
+
+        
+        
+
+        <Grid Grid.Row="1" x:Name="tableGrid">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button x:Name="NorthWestButton" Content="Метод северо-западного угла" Width="200" Margin="5" Click="NorthWestButton_Click" />
+            <Button x:Name="MinElementButton" Content="Метод минимальных элементов" Width="200" Margin="5" Click="MinElementButton_Click" />
+            <Button x:Name="clearButton" Content="Очистить матрицу стоимости" Width="200" Margin="5" Click="clearButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" >
+            <TextBlock FontSize="14" FontWeight="Bold" Text="C = "/>
+            <TextBlock x:Name="resultTextBlock" Text="?" FontSize="14" FontWeight="Bold"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
